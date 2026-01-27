@@ -26,8 +26,6 @@ npm-debug.log*
 .env
 .env.local
 
-# Custom models (too large for git)
-models/
 
 # Temporary files
 *.tmp
