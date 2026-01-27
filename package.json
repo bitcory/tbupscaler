@@ -34,14 +34,14 @@
     "extraFiles": [
       {
         "from": "resources/${os}/bin",
-        "to": "bin",
+        "to": "Resources/bin",
         "filter": [
           "**/*"
         ]
       },
       {
         "from": "resources/models",
-        "to": "models",
+        "to": "Resources/models",
         "filter": [
           "**/*"
         ]
