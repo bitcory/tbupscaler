@@ -15,7 +15,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { sanitizePath } from "@common/sanitize-path";
 import getDirectoryFromPath from "@common/get-directory-from-path";
 import { FEATURE_FLAGS } from "@common/feature-flags";
-import { ImageFormat, VALID_IMAGE_FORMATS } from "@/lib/valid-formats";
+import { ImageFormat, isValidImageFormat } from "@/lib/valid-formats";
 import ProgressBar from "./progress-bar";
 import InstructionsCard from "./instructions-card";
 import MoreOptionsDrawer from "./more-options-drawer";
@@ -151,7 +151,7 @@ const MainContent = ({
     // If file has a local path (dropped from file system)
     if (filePath) {
       const extension = fileObject?.name?.split(".").at(-1);
-      if (extension && VALID_IMAGE_FORMATS.includes(extension.toLowerCase())) {
+      if (extension && isValidImageFormat(extension.toLowerCase())) {
         logit("🖼 Setting image path: ", filePath);
         setImagePath(filePath);
         const dirname = getDirectoryFromPath(filePath);
@@ -176,7 +176,7 @@ const MainContent = ({
       const mimeExtension = type.split("/")[1] || "png";
       const extensionFromMime = mimeExtension === "jpeg" ? "jpg" : mimeExtension;
       const originalName = fileObject?.name || "";
-      const hasExtension = originalName.includes(".") && VALID_IMAGE_FORMATS.includes(originalName.split(".").pop()?.toLowerCase() || "");
+      const hasExtension = originalName.includes(".") && isValidImageFormat(originalName.split(".").pop()?.toLowerCase() || "");
       const fileName = hasExtension
         ? `paste-${currentTime}-${originalName}`
         : `paste-${currentTime}-image.${extensionFromMime}`;
@@ -225,7 +225,7 @@ const MainContent = ({
 
         // Use original filename if it has extension, otherwise use MIME-based extension
         const originalName = fileObject.name || "";
-        const hasExtension = originalName.includes(".") && VALID_IMAGE_FORMATS.includes(originalName.split(".").pop()?.toLowerCase() || "");
+        const hasExtension = originalName.includes(".") && isValidImageFormat(originalName.split(".").pop()?.toLowerCase() || "");
         const fileName = hasExtension
           ? `paste-${currentTime}-${originalName}`
           : `paste-${currentTime}-image.${extensionFromMime}`;
@@ -250,7 +250,7 @@ const MainContent = ({
 
         if (
           file.type === "image" &&
-          VALID_IMAGE_FORMATS.includes(file.extension)
+          isValidImageFormat(file.extension)
         ) {
           const reader = new FileReader();
           reader.onload = async (event) => {

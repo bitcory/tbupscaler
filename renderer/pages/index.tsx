@@ -17,7 +17,7 @@ import { translationAtom } from "@/atoms/translations-atom";
 import Sidebar from "@/components/sidebar";
 import MainContent from "@/components/main-content";
 import getDirectoryFromPath from "@common/get-directory-from-path";
-import { ImageFormat, VALID_IMAGE_FORMATS } from "@/lib/valid-formats";
+import { ImageFormat, isValidImageFormat } from "@/lib/valid-formats";
 import { initCustomModels } from "@/components/hooks/use-custom-models";
 import useSystemInfo from "@/components/hooks/use-system-info";
 
@@ -82,7 +82,7 @@ const Home = () => {
       logit("🖼 imagePath: ", path);
       const extension = path.split(".").pop().toLowerCase() as ImageFormat;
       logit("🔤 Extension: ", extension);
-      if (!VALID_IMAGE_FORMATS.includes(extension)) {
+      if (!isValidImageFormat(extension)) {
         toast({
           title: t("ERRORS.INVALID_IMAGE_ERROR.TITLE"),
           description: t("ERRORS.INVALID_IMAGE_ERROR.DESCRIPTION"),
