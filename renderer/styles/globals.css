@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply select-none;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-base-200 text-base-content;
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 245 58% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 36 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 211 100% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-base-content/10;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply rounded-full bg-base-content/20;
+  }
+}
+
+@layer utilities {
+  .animate {
+    @apply transition-all duration-200 ease-out;
+  }
+  .step-heading {
+    @apply mb-2 text-sm font-semibold text-base-content/70;
+  }
+
+  .react-select-container {
+    @apply w-40;
+  }
+  .full-width {
+    @apply w-full;
+  }
+  .react-select-container .react-select__control {
+    @apply h-10 cursor-pointer rounded-lg border border-base-300 bg-base-100 shadow-none transition-all hover:border-primary/30;
+  }
+
+  .react-select-container .react-select__control--menu-is-open {
+    @apply border-primary bg-base-100 ring-2 ring-primary/20;
+  }
+
+  .react-select-container .react-select__single-value {
+    @apply text-sm font-medium text-base-content;
+  }
+
+  .react-select-container .react-select__input-container {
+    @apply text-sm font-medium text-base-content;
+  }
+
+  .react-select-container .react-select__menu {
+    @apply rounded-xl border border-base-300 bg-base-100 p-1 text-sm shadow-apple-lg;
+  }
+
+  .react-select-container .react-select__option {
+    @apply my-0.5 cursor-pointer break-all rounded-lg bg-transparent text-base-content hover:bg-base-200;
+  }
+
+  .react-select-container .react-select__option--is-selected {
+    @apply bg-primary text-primary-content;
+  }
+
+  .outline-title {
+    text-shadow: none;
+  }
+  .outline-title-none {
+    text-shadow: none;
+  }
+
+  .apple-card {
+    @apply rounded-2xl border border-base-300/50 bg-base-100 shadow-apple;
+  }
+
+  .apple-btn {
+    @apply rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary/90 active:scale-[0.98];
+  }
+
+  .apple-btn-secondary {
+    @apply rounded-lg bg-base-200 px-4 py-2 text-sm font-medium text-base-content transition-all hover:bg-base-300 active:scale-[0.98];
+  }
+}
+
+.zoom-100 {
+  transform: scale(1);
+}
+.zoom-125 {
+  transform: scale(1.25);
+}
+.zoom-150 {
+  transform: scale(1.5);
+}
+.zoom-175 {
+  transform: scale(1.75);
+}
+.zoom-200 {
+  transform: scale(2);
+}
+
+.animate-step-in {
+  animation: animate-step-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple-style Button Overrides */
+.btn {
+  @apply h-10 !min-h-min rounded-lg px-4 py-2 text-sm font-medium normal-case shadow-none transition-all duration-200;
+}
+
+.btn-primary {
+  @apply border-0 bg-primary text-white hover:bg-primary/90 active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply border border-base-300 bg-base-100 text-base-content hover:bg-base-200 active:scale-[0.98];
+}
+
+.btn-ghost {
+  @apply border-0 bg-transparent text-base-content hover:bg-base-200 active:scale-[0.98];
+}
+
+input[type="range"] {
+  @apply h-1 rounded-full bg-base-300;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-4 w-4 cursor-pointer appearance-none rounded-full bg-primary shadow-apple;
+}
+
+/* Input Overrides */
+.input {
+  @apply rounded-lg border border-base-300 bg-base-100 text-base-content transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20;
+}
+
+/* Toggle/Checkbox Overrides */
+.toggle {
+  @apply border-base-300 bg-base-300;
+}
+.toggle:checked {
+  @apply border-primary bg-primary;
+}
+
+.__rcs-handle-button {
+  @apply border-primary bg-white shadow-apple-lg;
+}
+
+.mac-titlebar {
+  -webkit-app-region: drag;
+}
+
+.checkerboard {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(
+      45deg,
+      #e0e0e0 25%,
+      transparent 25%,
+      transparent 75%,
+      #e0e0e0 75%,
+      #e0e0e0
+    ),
+    linear-gradient(
+      -45deg,
+      #e0e0e0 25%,
+      transparent 25%,
+      transparent 75%,
+      #e0e0e0 75%,
+      #e0e0e0
+    );
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+.spinner {
+  -webkit-animation: sk-rotateplane 2.2s infinite ease-in-out;
+  animation: sk-rotateplane 2.2s infinite ease-in-out;
+}
+
+@keyframes animate-step-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-360.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-360.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-360deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-360deg) rotateY(-359.9deg);
+  }
+}

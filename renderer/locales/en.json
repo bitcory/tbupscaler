@@ -1,0 +1,328 @@
+{
+  "TITLE": "TBUPSCALER",
+  "INTRO": "Upscayl Cloud 소개!",
+  "HEADER": {
+    "GITHUB_BUTTON_TITLE": "GitHub에서 스타를 눌러주세요 😁",
+    "DESCRIPTION": "AI 이미지 업스케일러"
+  },
+  "FOOTER": {
+    "NEWS_TITLE": "UPSCAYL 소식",
+    "COPYRIGHT": "Copyright ©",
+    "TITLE": "제작: ",
+    "LINK_TITLE": "Upscayl Team"
+  },
+  "SETTINGS": {
+    "TITLE": "설정",
+    "CHANGE_LANGUAGE": { "TITLE": "언어 변경" },
+    "IMAGE_COMPRESSION": {
+      "TITLE": "이미지 압축",
+      "DESCRIPTION": "PNG 압축은 무손실이므로 파일 크기가 크게 줄어들지 않을 수 있으며, 높은 압축값은 성능에 영향을 줄 수 있습니다. JPG와 WebP 압축은 손실 압축입니다."
+    },
+    "CUSTOM_MODELS": {
+      "TITLE": "커스텀 모델 추가",
+      "BUTTON_FOLDER": "폴더 선택",
+      "DESCRIPTION": "자신만의 모델을 쉽게 추가할 수 있습니다. 자세한 내용은:",
+      "LINK_TITLE": "커스텀 모델 저장소"
+    },
+    "CUSTOM_INPUT_RESOLUTION": {
+      "TITLE": "커스텀 출력 너비",
+      "RESTART": "재시작 필요",
+      "DESCRIPTION": "출력 이미지에 사용자 지정 너비를 사용합니다. 높이는 자동으로 조정됩니다. 이 옵션을 활성화하면 배율 설정이 무시됩니다."
+    },
+    "DONATE": {
+      "DESCRIPTION": "마음에 드신다면 :)",
+      "BUTTON_TITLE": "💎 후원하기"
+    },
+    "GPU_ID_INPUT": {
+      "TITLE": "GPU ID",
+      "DESCRIPTION": "자세한 내용은 Upscayl 문서를 참조하세요.",
+      "ADDITIONAL_DESCRIPTION": "Windows에서 더 나은 결과를 위해 성능 모드를 활성화하세요."
+    },
+    "IMAGE_FORMAT": {
+      "TITLE": "이미지 형식",
+      "PNG": "PNG",
+      "JPG": "JPG",
+      "WEBP": "WEBP"
+    },
+    "COPY_METADATA": {
+      "TITLE": "이미지 메타데이터 복사",
+      "DESCRIPTION": "업스케일된 이미지에 원본 이미지 메타데이터(EXIF)를 유지합니다.",
+      "SUGGEST_JPG_TITLE": "권장 형식 변경",
+      "SUGGEST_JPG_DESCRIPTION": "다양한 시스템에서 메타데이터 호환성을 높이려면 JPG 형식을 권장합니다. 변경하시겠습니까?",
+      "CHANGE_TO_JPG": "JPG로 변경",
+      "KEEP_CURRENT_FORMAT": "{format} 유지"
+    },
+    "IMAGE_SCALE": {
+      "TITLE": "이미지 배율",
+      "DESCRIPTION": "4배 이상(16배 더블 업스케일 제외)은 AI 업스케일링을 사용하지 않고 이미지 크기만 조정합니다.",
+      "WARNING": "5배 이상은 일부 기기에서 성능 문제를 일으킬 수 있습니다!",
+      "ADDITIONAL_WARNING": "일부 기기에서 성능 문제를 일으킬 수 있습니다!"
+    },
+    "LOG_AREA": {
+      "ON_COPY": "복사됨 ✅",
+      "BUTTON_TITLE": "로그 복사 📋",
+      "NO_LOGS": "표시할 로그가 없습니다"
+    },
+    "OVERWRITE_TOGGLE": {
+      "TITLE": "이전 업스케일 덮어쓰기",
+      "DESCRIPTION": "활성화하면 이미지를 직접 불러오는 대신 다시 처리합니다."
+    },
+    "RESET_SETTINGS": {
+      "BUTTON_TITLE": "설정 초기화",
+      "ALERT": "설정이 초기화되었습니다. 앱을 다시 시작해주세요."
+    },
+    "SAVE_OUTPUT_FOLDER": {
+      "TITLE": "저장 폴더 기억",
+      "DESCRIPTION": "활성화하면 세션 간에 저장 폴더가 기억됩니다."
+    },
+    "AUTO_UPDATE": {
+      "TITLE": "자동 업데이트",
+      "DESCRIPTION": "활성화하면 새 업데이트를 확인하고 알려줍니다."
+    },
+    "ENABLE_CONTRIBUTION": {
+      "TITLE": "개선에 기여하기",
+      "DESCRIPTION": "활성화하면 앱 인터페이스와 기능 개선을 위해 익명 사용 데이터를 수집합니다."
+    },
+    "THEME": {
+      "TITLE": "테마"
+    },
+    "LANGUAGE": {
+      "TITLE": "언어"
+    },
+    "CUSTOM_TILE_SIZE": {
+      "TITLE": "커스텀 타일 크기",
+      "DESCRIPTION": "이미지 분할에 사용자 지정 타일 크기를 사용합니다. 생성되는 타일 수를 줄여 이미지 처리 속도를 높일 수 있습니다."
+    },
+    "TURN_OFF_NOTIFICATIONS": {
+      "TITLE": "알림 끄기",
+      "DESCRIPTION": "활성화하면 성공 또는 실패 시 시스템 알림을 보내지 않습니다."
+    },
+    "SUPPORT": {
+      "TITLE": "문제가 있나요?",
+      "DOCS_BUTTON_TITLE": "🙏 도움말",
+      "EMAIL_BUTTON_TITLE": "📧 개발자에게 이메일"
+    },
+    "TTA_MODE": {
+      "TITLE": "고품질 모드",
+      "DESCRIPTION": "고품질 모드로 시간이 오래 걸립니다."
+    },
+    "SYSTEM_INFO": {
+      "TITLE": "시스템 정보"
+    }
+  },
+  "APP": {
+    "TITLE": "TBUPSCALER",
+    "STATUS": {
+      "SELECTED": "선택됨",
+      "SET": "설정됨"
+    },
+    "HINTS": {
+      "SELECT_IMAGE_FIRST": "먼저 이미지를 선택하세요",
+      "SELECT_OUTPUT_FIRST": "저장 폴더를 선택하세요"
+    },
+    "RESULT": {
+      "UPSCALE_COMPLETE": "업스케일 완료",
+      "OPEN_FOLDER": "폴더 열기",
+      "NEW_IMAGE": "새 이미지"
+    },
+    "BATCH_MODE": {
+      "TITLE": "일괄 처리",
+      "DESCRIPTION": "폴더 내 모든 파일을 한 번에 업스케일합니다"
+    },
+    "FILE_SELECTION": {
+      "TITLE": "이미지 선택",
+      "BATCH_MODE_TYPE": "폴더 선택",
+      "SINGLE_MODE_TYPE": "이미지 선택",
+      "CHANGE": "이미지 변경"
+    },
+    "MODEL_SELECTION": {
+      "TITLE": "모델 선택",
+      "DESCRIPTION": "모델 선택",
+      "IMPORTED_CUSTOM_MODELS": "커스텀 모델",
+      "BEFORE": "이전",
+      "AFTER": "이후",
+      "ZOOM": "확대",
+      "MODELS": {
+        "upscayl-standard-4x": {
+          "NAME": "스탠다드",
+          "DESCRIPTION": "대부분의 이미지에 적합합니다."
+        },
+        "upscayl-lite-4x": {
+          "NAME": "라이트 (빠름)",
+          "DESCRIPTION": "대부분의 이미지에 적합합니다. 최소한의 품질 손실로 고속 업스케일링."
+        },
+        "remacri-4x": {
+          "NAME": "고품질",
+          "DESCRIPTION": "자연 이미지용. 선명도와 디테일이 향상됩니다."
+        },
+        "ultramix-balanced-4x": {
+          "NAME": "밸런스",
+          "DESCRIPTION": "선명도와 디테일이 균형 잡힌 자연 이미지용."
+        },
+        "ultrasharp-4x": {
+          "NAME": "샤프",
+          "DESCRIPTION": "선명도에 초점을 맞춘 자연 이미지용."
+        },
+        "digital-art-4x": {
+          "NAME": "디지털 아트",
+          "DESCRIPTION": "디지털 아트와 일러스트레이션용."
+        },
+        "high-fidelity-4x": {
+          "NAME": "정밀",
+          "DESCRIPTION": "사실적인 디테일과 부드러운 텍스처에 초점을 맞춘 모든 종류의 이미지용."
+        }
+      }
+    },
+    "DOUBLE_UPSCAYL": {
+      "TITLE": "더블 업스케일",
+      "DESCRIPTION": "이미지에 업스케일을 두 번 실행합니다. 4배 이상의 배율에서는 처리 시간이 크게 증가하고 성능 문제가 발생할 수 있습니다."
+    },
+    "OUTPUT_PATH_SELECTION": {
+      "TITLE": "저장 폴더",
+      "MAC_APP_STORE_ALERT": "MacOS App Store 보안 제한으로 인해 앱을 시작할 때마다 저장 폴더를 선택해야 합니다.\n\n이를 피하려면 '설정' 탭에서 기본 저장 폴더를 영구적으로 저장할 수 있습니다.",
+      "NOT_SELECTED": "선택되지 않음",
+      "DEFAULT_IMG_PATH": "기본값: 이미지 경로",
+      "DEFAULT_FOLDER_PATH": "기본값: 폴더 경로",
+      "BUTTON_TITLE": "저장 폴더 설정",
+      "CHANGE": "폴더 변경"
+    },
+    "SCALE_SELECTION": {
+      "TITLE": "업스케일",
+      "FROM_TITLE": "",
+      "TO_TITLE": " → ",
+      "NO_OUTPUT_FOLDER_ALERT": "먼저 저장 폴더를 선택하세요",
+      "START_BUTTON_TITLE": "업스케일",
+      "IN_PROGRESS_BUTTON_TITLE": "처리 중..."
+    },
+    "MORE_OPTIONS_DRAWER": {
+      "RESET_BUTTON_TITLE": "이미지 초기화",
+      "LENS_VIEW_TITLE": "렌즈 뷰",
+      "SLIDER_VIEW_TITLE": "슬라이더 뷰",
+      "ZOOM_AMOUNT_TITLE": "확대 배율",
+      "TOTAL_UPSCAYLS": "총 업스케일 횟수",
+      "TOTAL_BATCH_UPSCAYLS": "총 일괄 처리 횟수",
+      "TOTAL_IMAGE_UPSCAYLS": "총 이미지 업스케일 횟수",
+      "TOTAL_DOUBLE_UPSCAYLS": "총 더블 업스케일 횟수",
+      "AVERAGE_UPSCAYL_TIME": "평균 업스케일 시간",
+      "LAST_UPSCAYL_DURATION": "마지막 업스케일 소요 시간",
+      "LAST_USED_AT": "마지막 사용"
+    },
+    "PROGRESS_BAR": {
+      "BATCH_UPSCAYL_IN_PROGRESS_TITLE": "일괄 처리 진행 중:",
+      "IN_PROGRESS_TITLE": "업스케일 처리 중...",
+      "STOP_BUTTON_TITLE": "중지"
+    },
+    "RESET_BUTTON_TITLE": "초기화",
+    "RIGHT_PANE_INFO": {
+      "SELECT_FOLDER": "폴더를 선택하세요",
+      "SELECT_IMAGE": "이미지 업로드",
+      "SELECT_IMAGE_SUBTITLE": "드래그앤드롭 및 복붙하기",
+      "SELECT_FOLDER_DESCRIPTION": "PNG, JPG, JPEG, WEBP 이미지만 포함된 폴더를 선택하세요.",
+      "SELECT_IMAGES_DESCRIPTION": "PNG, JPG, JPEG, WEBP 이미지를 선택하거나 드래그 앤 드롭하세요."
+    },
+    "PROGRESS": {
+      "PROCESSING_TITLE": "이미지 처리 중...",
+      "SCALING_CONVERTING_TITLE": "이미지 크기 조정 및 변환 중...",
+      "WAIT_TITLE": "잠시만 기다려주세요...",
+      "SUCCESS_TITLE": "업스케일 성공!",
+      "BATCH": {
+        "SELECTED_FOLDER_TITLE": "선택된 폴더:",
+        "DONE_TITLE": "모든 처리 완료!",
+        "OPEN_UPSCAYLED_FOLDER_TITLE": "결과 폴더 열기"
+      }
+    },
+    "SLIDER": {
+      "ORIGINAL_TITLE": "원본",
+      "UPSCAYLED_TITLE": "업스케일됨"
+    },
+    "DIALOG_BOX": {
+      "CLOSE": "닫기"
+    }
+  },
+  "ERRORS": {
+    "GPU_ERROR": {
+      "TITLE": "GPU 오류",
+      "DESCRIPTION": "GPU에서 문제가 발생했습니다. 문제 해결을 위해 문서를 참조하세요! ({data})"
+    },
+    "COPY_ERROR": {
+      "TITLE": "복사 오류",
+      "DESCRIPTION": ""
+    },
+    "READ_WRITE_ERROR": {
+      "TITLE": "읽기/쓰기 오류",
+      "DESCRIPTION": "경로가 올바른지, 적절한 읽기/쓰기 권한이 있는지 확인하세요 \n({data})"
+    },
+    "TILE_SIZE_ERROR": {
+      "TITLE": "오류",
+      "DESCRIPTION": "타일 크기가 잘못되었습니다. 설정에서 타일 크기를 변경하거나 0으로 설정하세요 ({data})"
+    },
+    "EXCEPTION_ERROR": {
+      "TITLE": "예외 오류",
+      "DESCRIPTION": "오류가 발생했습니다. 바이너리가 명령을 제대로 실행하지 못한 것 같습니다. 로그를 확인해 보세요. 추가 도움이 필요하면 GitHub 저장소에 이슈를 등록할 수 있습니다."
+    },
+    "GENERIC_ERROR": {
+      "TITLE": "오류"
+    },
+    "NO_OUTPUT_FOLDER_ERROR": {
+      "TITLE": "저장 폴더 설정",
+      "DESCRIPTION": "먼저 저장 폴더를 선택하세요"
+    },
+    "INVALID_IMAGE_ERROR": {
+      "TITLE": "잘못된 이미지",
+      "DESCRIPTION": "PNG, JPG, JPEG, JFIF 또는 WEBP 확장자를 가진 이미지를 선택/붙여넣기하세요.",
+      "ADDITIONAL_DESCRIPTION": "이미지를 드래그 앤 드롭하세요",
+      "CLIPBOARD_DESCRIPTION": "클립보드에 붙여넣을 이미지 파일이 없습니다!"
+    },
+    "NO_IMAGE_ERROR": {
+      "TITLE": "이미지가 선택되지 않음",
+      "DESCRIPTION": "업스케일할 이미지를 선택하세요"
+    },
+    "METADATA_ERROR": {
+      "TITLE": "메타데이터 복사 오류",
+      "DESCRIPTION": "원본 이미지에서 생성된 이미지로 메타데이터를 복사할 수 없습니다. ({data})"
+    },
+    "OPEN_DOCS_TITLE": "문서 열기",
+    "OPEN_DOCS_BUTTON_TITLE": "문제 해결"
+  },
+  "WARNING": {
+    "GENERIC_WARNING": {
+      "TITLE": "경고"
+    },
+    "METADATA_FORMAT": {
+      "TITLE": "메타데이터 경고",
+      "DESCRIPTION": "일부 시스템에서는 JPG 이외의 형식에서 메타데이터가 표시되지 않을 수 있습니다. 필요한 경우 특정 도구를 사용하여 메타데이터를 확인하세요."
+    }
+  },
+  "UPSCAYL_CLOUD": {
+    "COMING_SOON": "곧 출시!",
+    "CATCHY_PHRASE_1": "더 이상의 오류, 하드웨어 문제, 품질 저하, 긴 로딩 시간은 없습니다!",
+    "CATCHY_PHRASE_2": "🌐 언제 어디서나 모든 기기에서 업스케일\n☁️ 그래픽 카드나 하드웨어 불필요\n👩 얼굴 향상\n🦋 10개 이상의 모델 선택 가능\n🏎 데스크톱 버전보다 5배 빠름\n🎞 비디오 업스케일링\n💰 상업적 사용 가능\n😴 자는 동안 업스케일",
+    "ALREADY_REGISTERED_ALERT": "감사합니다 {name}님! 이미 이메일이 등록된 것 같습니다 :D 그렇지 않다면 다시 시도해주세요.",
+    "ADD_SUCCESS": "대기 목록에 등록해 주셔서 감사합니다! Upscayl Cloud가 준비되면 알려드리겠습니다.",
+    "INCORRECT_FIELDS_ALERT": "모든 필드를 올바르게 입력하세요.",
+    "JOIN_WAITLIST": "대기 목록 등록",
+    "DONT_SHOW_AGAIN": "다시 보지 않기"
+  },
+  "ONBOARDING_DIALOG": {
+    "NEXT_BUTTON_TITLE": "다음",
+    "BACK_BUTTON_TITLE": "이전",
+    "GET_STARTED_BUTTON_TITLE": "시작하기",
+    "SETTINGS_NOTE": "이 설정은 나중에 언제든지 변경할 수 있습니다.",
+    "STEP_1": {
+      "TITLE": "TBUPSCALER에 오신 것을 환영합니다 🎉",
+      "DESCRIPTION": "몇 가지 간단한 단계로 시작해보세요."
+    },
+    "STEP_2": {
+      "TITLE": "설정을 선택하세요 🎨",
+      "DESCRIPTION": "초기 설정을 구성합니다."
+    },
+    "STEP_3": {
+      "TITLE": "어떻게 사용하나요? 🚀",
+      "DESCRIPTION": "새로운 기능에 대한 짧은 영상을 시청하세요."
+    },
+    "STEP_4": {
+      "TITLE": "모든 준비가 완료되었습니다! 🎉",
+      "DESCRIPTION": "이제 이미지 업스케일을 시작할 준비가 되었습니다!"
+    }
+  }
+}
