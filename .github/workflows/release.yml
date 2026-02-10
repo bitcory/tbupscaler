@@ -25,10 +25,11 @@ jobs:
       - name: Remove custom models
         run: rm -rf models/
 
+      - name: Compile TypeScript and Next.js
+        run: npm run build
+
       - name: Build for macOS
-        run: npm run dist:mac
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder --mac --universal --publish never
 
       - name: Upload macOS artifacts
         uses: actions/upload-artifact@v4
@@ -56,10 +57,11 @@ jobs:
       - name: Remove custom models
         run: Remove-Item -Recurse -Force models/ -ErrorAction SilentlyContinue
 
+      - name: Compile TypeScript and Next.js
+        run: npm run build
+
       - name: Build for Windows
-        run: npm run dist:win
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx electron-builder --win --publish never
 
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v4
