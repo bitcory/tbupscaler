@@ -93,32 +93,7 @@ const Sidebar = ({
     setUpscaledBatchFolderPath("");
     if (imagePath !== "" || batchFolderPath !== "") {
       setProgress(t("APP.PROGRESS.WAIT_TITLE"));
-      // Double Upscayl
-      if (doubleUpscayl) {
-        window.electron.send<DoubleUpscaylPayload>(
-          ELECTRON_COMMANDS.DOUBLE_UPSCAYL,
-          {
-            imagePath,
-            outputPath,
-            model: selectedModelId,
-            gpuId: gpuId.length === 0 ? null : gpuId,
-            saveImageAs,
-            scale,
-            noImageProcessing,
-            compression: compression.toString(),
-            tileSize,
-            ttaMode,
-          },
-        );
-        setUserStats((prev) => ({
-          ...prev,
-          totalUpscayls: prev.totalUpscayls + 1,
-          lastUsedAt: new Date().getTime(),
-          doubleUpscayls: prev.doubleUpscayls + 1,
-          imageUpscayls: prev.imageUpscayls + 1,
-        }));
-        logit("🏁 DOUBLE_UPSCAYL");
-      } else if (batchMode) {
+      if (batchMode) {
         // Batch Upscayl
         setDoubleUpscayl(false);
         window.electron.send<BatchUpscaylPayload>(
@@ -143,6 +118,31 @@ const Sidebar = ({
           batchUpscayls: prev.doubleUpscayls + 1,
         }));
         logit("🏁 FOLDER_UPSCAYL");
+      } else if (doubleUpscayl) {
+        // Double Upscayl
+        window.electron.send<DoubleUpscaylPayload>(
+          ELECTRON_COMMANDS.DOUBLE_UPSCAYL,
+          {
+            imagePath,
+            outputPath,
+            model: selectedModelId,
+            gpuId: gpuId.length === 0 ? null : gpuId,
+            saveImageAs,
+            scale,
+            noImageProcessing,
+            compression: compression.toString(),
+            tileSize,
+            ttaMode,
+          },
+        );
+        setUserStats((prev) => ({
+          ...prev,
+          totalUpscayls: prev.totalUpscayls + 1,
+          lastUsedAt: new Date().getTime(),
+          doubleUpscayls: prev.doubleUpscayls + 1,
+          imageUpscayls: prev.imageUpscayls + 1,
+        }));
+        logit("🏁 DOUBLE_UPSCAYL");
       } else {
         // Single Image Upscayl
         window.electron.send<ImageUpscaylPayload>(ELECTRON_COMMANDS.UPSCAYL, {

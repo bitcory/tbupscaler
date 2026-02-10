@@ -144,7 +144,7 @@
       "ZOOM": "확대",
       "MODELS": {
         "upscayl-standard-4x": {
-          "NAME": "스탠다드",
+          "NAME": "스탠다드 (범용)",
           "DESCRIPTION": "대부분의 이미지에 적합합니다."
         },
         "upscayl-lite-4x": {
@@ -152,23 +152,23 @@
           "DESCRIPTION": "대부분의 이미지에 적합합니다. 최소한의 품질 손실로 고속 업스케일링."
         },
         "remacri-4x": {
-          "NAME": "고품질",
+          "NAME": "고품질 (사진 선명)",
           "DESCRIPTION": "자연 이미지용. 선명도와 디테일이 향상됩니다."
         },
         "ultramix-balanced-4x": {
-          "NAME": "밸런스",
+          "NAME": "밸런스 (균형)",
           "DESCRIPTION": "선명도와 디테일이 균형 잡힌 자연 이미지용."
         },
         "ultrasharp-4x": {
-          "NAME": "샤프",
+          "NAME": "샤프 (최대 선명)",
           "DESCRIPTION": "선명도에 초점을 맞춘 자연 이미지용."
         },
         "digital-art-4x": {
-          "NAME": "디지털 아트",
+          "NAME": "디지털 아트 (일러스트)",
           "DESCRIPTION": "디지털 아트와 일러스트레이션용."
         },
         "high-fidelity-4x": {
-          "NAME": "정밀",
+          "NAME": "정밀 (원본 보존)",
           "DESCRIPTION": "사실적인 디테일과 부드러운 텍스처에 초점을 맞춘 모든 종류의 이미지용."
         }
       }

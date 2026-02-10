@@ -107,7 +107,6 @@ const MainContent = ({
   };
 
   const openFolderHandler = (e) => {
-    const logit = useLogger();
     logit("📂 OPEN_FOLDER: ", upscaledBatchFolderPath);
     window.electron.send(
       ELECTRON_COMMANDS.OPEN_FOLDER,
