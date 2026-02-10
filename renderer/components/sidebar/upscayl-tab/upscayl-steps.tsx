@@ -24,6 +24,7 @@ interface IProps {
   batchMode: boolean;
   setBatchMode: React.Dispatch<React.SetStateAction<boolean>>;
   imagePath: string;
+  batchFolderPath: string;
   doubleUpscayl: boolean;
   setDoubleUpscayl: React.Dispatch<React.SetStateAction<boolean>>;
   dimensions: {
@@ -41,6 +42,7 @@ function UpscaylSteps({
   batchMode,
   setBatchMode,
   imagePath,
+  batchFolderPath,
   doubleUpscayl,
   setDoubleUpscayl,
   dimensions,
@@ -84,7 +86,7 @@ function UpscaylSteps({
     return newDimensions;
   }, [dimensions.width, dimensions.height, doubleUpscayl, scale]);
 
-  const isImageSelected = imagePath.length > 0;
+  const isImageSelected = batchMode ? batchFolderPath.length > 0 : imagePath.length > 0;
   const isOutputSelected = outputPath && outputPath.length > 0;
   const canUpscale = isImageSelected && isOutputSelected && progress.length === 0;
 

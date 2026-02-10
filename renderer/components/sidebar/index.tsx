@@ -211,6 +211,7 @@ const Sidebar = ({
             batchMode={batchMode}
             setBatchMode={setBatchMode}
             imagePath={imagePath}
+            batchFolderPath={batchFolderPath}
             doubleUpscayl={doubleUpscayl}
             setDoubleUpscayl={setDoubleUpscayl}
             dimensions={dimensions}
