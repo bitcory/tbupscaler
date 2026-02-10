@@ -10,7 +10,7 @@ export default function Header({ version }: { version: string }) {
     <div className="px-4 py-3">
       <div className="flex items-center gap-2.5">
         <img
-          src="/icon.png"
+          src="./icon.png"
           alt="Logo"
           className="h-10 w-10 rounded-xl shadow-apple"
         />

@@ -10,15 +10,25 @@ import { app } from "electron";
  * Same for the models directory as well.
  */
 const appRootDir = app.getAppPath();
+const platform = getPlatform();
 
-const binariesPath = isDev
-  ? join(appRootDir, "resources", getPlatform()!, "bin")
-  : join(dirname(appRootDir), "bin");
+// Windows: bin and models are at app root level (same level as resources/)
+// Mac: bin and models are inside Resources/ (same level as app.asar)
+const resourcesDir = isDev
+  ? join(appRootDir, "resources", platform!, "bin")
+  : platform === "win"
+    ? join(dirname(dirname(appRootDir)), "bin")
+    : join(dirname(appRootDir), "bin");
 
-const execPath = resolve(join(binariesPath, `./upscayl-bin`));
+const binariesPath = resourcesDir;
+
+const execFileName = platform === "win" ? "upscayl-bin.exe" : "upscayl-bin";
+const execPath = resolve(join(binariesPath, execFileName));
 
 const modelsPath = isDev
   ? resolve(join(appRootDir, "resources", "models"))
-  : resolve(join(dirname(appRootDir), "models"));
+  : platform === "win"
+    ? resolve(join(dirname(dirname(appRootDir)), "models"))
+    : resolve(join(dirname(appRootDir), "models"));
 
 export { execPath, modelsPath };
